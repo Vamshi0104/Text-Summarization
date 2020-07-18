@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TEXT-SUMMARIZATION</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.footer {
+   position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding:8px;
+   background-color: #ccc;
+   color: white;
+   text-align: center;
+}
+textarea
+{
+color:black;
+font-size:17px;
+font-weight:600;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  color: gray;
+  background-color: #000000;
+border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn:hover {
+color:white;
+ background-color:green;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:600;
+}
+.button:hover {
+  background-color: #4CAF00; 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 21px;
+}
+body, html, .body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background:
+    radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)),
+    linear-gradient(108deg, #26D0CE, #1A2980 90%);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.body{
+  display: table;
+}
+
+.wrapper{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.info{
+  margin: 0.5em 0;
+  font-size: 1.25em;
+  color: #FFF;
+  text-shadow: 0 0 0.5em #000;
+}
+
+.input-phone{
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 0.25em;
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  text-align: center;
+  box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+<div class="body" ng-app="myApp">
+    <div class="wrapper" ng-controller="MyCtrl">
+	<h1 style="color:white;">SUMMARIZE YOUR TEXT</h1>
+<form name="form" action="http://127.0.0.1:5000/output"  method="POST">
+  <textarea cols="100" rows="25" name="textarea" id="textarea"></textarea>   
+<br>
+<br>
+	<div class="button">
+	<input type="submit" class="button" value="SUBMIT">
+	</div>
+</form>
+  </div>
+</div>
+<br><br>
+<div class="footer">
+  <footer style="color:black;font-weight:600;">&copy; Copyright 2020 MVK</footer>
+</div>
+<body>
+</html>

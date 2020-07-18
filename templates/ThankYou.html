@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Output-Content</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+<style>
+#copying
+{
+background-color:black;
+color: white;
+padding: 6px 18px;
+}
+#copying:hover
+{
+background-color:green;
+color:white;
+}
+#download
+{
+background-color:black;
+color: white;
+padding: 6px 18px;
+}
+#download:hover
+{
+background-color:green;
+color:white;
+}
+#myInput
+{
+display: block;
+resize: none;
+height:200px;
+width:450px;
+}
+.footer {
+   position:fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding:8px;
+   background-color: #ccc;
+   color: white;
+   text-align: center;
+}
+body {
+background:
+    radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)),
+    linear-gradient(108deg, #26D0CE, #1A2980 90%);
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+.card {
+  background: #fff;
+  border-radius: 3px solid white;
+  display: inline-block;
+  font-weight:600;
+  height: 450px;
+  margin: 1rem;
+  position: relative;
+  width: 600px;
+}
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+textarea
+{
+color:black;
+font-size:17px;
+font-weight:600;
+}
+</style>
+</head>
+<script>
+ window.onload = function()
+	  {
+	  var txt = document.getElementById('myInput');
+      document.getElementById('download').onclick = function(code)
+		{
+      this.href = 'data:text/doc;charset=utf-8,' + encodeURIComponent(txt.value);
+        };
+      };
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+main();
+</script>
+  <h1 align="center" style="color:white;">Output Summarized Text :</h1><br>
+<div class="card card-1">
+  <br><br>{{ res }}<br><br><br>
+  <div id="editor"></div>
+  <center>EDIT <i class="fa fa-hand-o-down"> -- </i> Download <a download="Summarizied-Content.doc" id="download" title="Download as PDF"><i class="fa fa-cloud-download"></i></a>  Copy  <button title="Copy to Clipboard" id="copying" onclick="myFunction()"><i class="fa fa-copy"></i></button>
+    <textarea id="myInput">{{ res }}</textarea>
+</center>
+</div>
+<div class="footer">
+  <footer style="color:black;font-weight:600;">&copy; Copyright 2020 MVK</footer>
+</div>
+</body>
+</html>
