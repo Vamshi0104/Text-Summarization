@@ -22,13 +22,13 @@ uses popular Python micro web framework that is FLASK.This Application consist o
 
 
 * For Review Analysis,importing vadersentiment is required ,thus run the command as follows:
->                               pip install nlp
+>                    pip install nlp
 
 * For exporting and processing the data,run the following script in new .py file before ruuning the application as follows:
->                               import nltk
->                               nltk.download('stopwords')
->                               nltk.download('word_tokenize')
->                               nltk.download('sent_tokenize')
+>               import nltk
+>               nltk.download('stopwords')
+>               nltk.download('word_tokenize')
+>               nltk.download('sent_tokenize')
 >
 
 *  After installing above libraries,we need to import those and use the functionality in this application.
@@ -37,10 +37,10 @@ uses popular Python micro web framework that is FLASK.This Application consist o
 
 * Method - 1 : Run from Editor in venv and view localhost application in any Browser with link (http://127.0.0.1:5000/)
 * Method - 2 : Run from command prompt with specified path location of project by using following command
->                               python __init__.py
+>                    python __init__.py
 
 
-##### >>> Click to view the Entire Working of the Application : 
+##### Note : Detail-Working Demo of the Application is attached to the "/Output" folder of Repository 
 
 
 
@@ -49,4 +49,4 @@ uses popular Python micro web framework that is FLASK.This Application consist o
 ![DEMO-OUTPUT](Output_TextSumm.gif)
 
 
->                               Happy Coding :)
+>                    Happy Coding :)
