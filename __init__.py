@@ -10,7 +10,7 @@ def index():
 def output():
     if request.method == 'POST':
         textvalue = request.form.get("textarea", None)
-        return render_template('ThankYou.html', res=outputsumm(textvalue))
+        return render_template('Output_Content.html', res=outputsumm(textvalue))
 
 if __name__ == '__main__':
     app.run(debug=True)
